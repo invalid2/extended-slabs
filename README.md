@@ -38,7 +38,7 @@ Contributions, issues and feature requests are welcome !<br />Feel free to check
 
 ## 📝 License
 
-Copyright © 2019 [Blackout03](https://github.com/Blackout03).<br />
+Copyright © 2020 [Blackout03](https://github.com/Blackout03).<br />
 This project is [MIT](https://github.com/Blackout03/extended-slabs/blob/master/LICENSE) licensed.
 
 ***
