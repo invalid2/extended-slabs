@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[25,)"
+loaderVersion="[31,)"
 issueTrackerURL="https://github.com/thinkverse/extended-slabs/issues"
 
 [[mods]]
@@ -16,13 +16,13 @@ issueTrackerURL="https://github.com/thinkverse/extended-slabs/issues"
 [[dependencies.versecraft]]
     modId="forge"
     mandatory=true
-    versionRange="[25,)"
+    versionRange="[31,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.versecraft]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.13.2]"
+    versionRange="[1.15.2]"
     ordering="NONE"
     side="BOTH"
