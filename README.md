@@ -21,7 +21,7 @@
 
 <p>
   <img src="https://cf.way2muchnoise.eu/full_374492_downloads.svg" />
-  <img src="https://cf.way2muchnoise.eu/versions/374492.svg" />
+  <img src="https://cf.way2muchnoise.eu/374492.svg" />
 </p>
 
 ## Author
