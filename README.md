@@ -15,7 +15,7 @@
 
 ### 🏠 [Homepage](https://thinkverse.dev/extended-slabs/) Update URL Later
 
-> Description
+> A mod that adds Vertical Slabs to minecraft
 
 ### 📂 [Download](https://www.curseforge.com/minecraft/mc-mods/extended-slabs-1-15)
 
