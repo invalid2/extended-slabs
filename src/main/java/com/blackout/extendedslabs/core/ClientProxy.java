@@ -1,7 +1,6 @@
 package com.blackout.extendedslabs.core;
 
 import com.blackout.extendedslabs.init.ModBlocks;
-import com.blackout.extendedslabs.render.block.BlockRenderLayer;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.color.BlockColors;

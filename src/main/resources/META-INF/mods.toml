@@ -1,6 +1,6 @@
 modLoader="javafml"
 loaderVersion="[31,)"
-issueTrackerURL="https://github.com/thinkverse/extended-slabs/issues"
+issueTrackerURL="https://github.com/Blackout03/extended-slabs/issues"
 
 [[mods]]
     modId="extendedslabs"

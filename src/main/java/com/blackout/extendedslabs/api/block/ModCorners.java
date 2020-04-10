@@ -10,7 +10,13 @@ import net.minecraft.util.LazyValue;
 import java.util.Locale;
 
 public enum ModCorners {
-    OAK(Blocks.OAK_STAIRS);
+    ACACIA(Blocks.ACACIA_STAIRS),
+    BIRCH(Blocks.BIRCH_STAIRS),
+    DARK_OAK(Blocks.DARK_OAK_STAIRS),
+    JUNGLE(Blocks.JUNGLE_STAIRS),
+    OAK(Blocks.OAK_STAIRS),
+    SPRUCE(Blocks.SPRUCE_STAIRS),
+    STONE(Blocks.STONE_STAIRS);
 
     public static final ModCorners[] VALUES = values();
 

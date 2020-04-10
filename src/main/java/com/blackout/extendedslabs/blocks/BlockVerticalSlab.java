@@ -23,6 +23,7 @@ import net.minecraft.world.IWorld;
 import javax.annotation.Nullable;
 
 public class BlockVerticalSlab extends Block implements IWaterLoggable {
+
     public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final EnumProperty<VerticalSlabShape> SHAPE = EnumProperty.create("shape", VerticalSlabShape.class);
