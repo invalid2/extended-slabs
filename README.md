@@ -9,19 +9,19 @@
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" target="_blank" />
   </a>
   <a href="https://github.com/Blackout03/extended-slabs/blob/master/LICENSE">
-    <img alt="License: LGPL v2.1" src="https://img.shields.io/badge/License-LGPL%20v2.1-blue.svg" target="_blank" />
+    <img alt="License: LGPL v2.1" src="https://img.shields.io/badge/License-MIT-blue.svg" target="_blank" />
   </a>
 </p>
 
-### 🏠 [Homepage](https://thinkverse.dev/extended-slabs/) Update URL Later
+### 🏠 [Homepage](http://blackout03.c1.biz/mods/)
 
-> Description
+> A mod that adds Vertical Slabs to minecraft!
 
 ### 📂 [Download](https://www.curseforge.com/minecraft/mc-mods/extended-slabs-1-15)
 
 <p>
-  <img src="https://cf.way2muchnoise.eu/full_extended-slabs-1-15_downloads.svg" />
-  <img src="https://cf.way2muchnoise.eu/versions/extended-slabs-1-15.svg" />
+  <img src="http://cf.way2muchnoise.eu/full_374492_downloads.svg" />
+  <img src="http://cf.way2muchnoise.eu/versions/For%20MC_374492_all.svg" />
 </p>
 
 ## Author
