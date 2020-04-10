@@ -9,7 +9,7 @@
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" target="_blank" />
   </a>
   <a href="https://github.com/Blackout03/extended-slabs/blob/master/LICENSE">
-    <img alt="License: LGPL v2.1" src="https://img.shields.io/badge/License-LGPL%20v2.1-blue.svg" target="_blank" />
+    <img alt="License: LGPL v2.1" src="https://img.shields.io/badge/License-MIT-blue.svg" target="_blank" />
   </a>
 </p>
 
