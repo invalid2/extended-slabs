@@ -13,7 +13,7 @@
   </a>
 </p>
 
-### 🏠 [Homepage](https://thinkverse.dev/extended-slabs/) Update URL Later
+### 🏠 [Homepage](http://blackout03.c1.biz/mods/)
 
 > A mod that adds Vertical Slabs to minecraft!
 
