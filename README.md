@@ -20,8 +20,8 @@
 ### 📂 [Download](https://www.curseforge.com/minecraft/mc-mods/extended-slabs-1-15)
 
 <p>
-  <img src="https://cf.way2muchnoise.eu/full_extended-slabs-1-15_downloads.svg" />
-  <img src="https://cf.way2muchnoise.eu/versions/extended-slabs-1-15.svg" />
+  <img src="https://cf.way2muchnoise.eu/full_374492_downloads.svg" />
+  <img src="https://cf.way2muchnoise.eu/versions/374492.svg" />
 </p>
 
 ## Author
