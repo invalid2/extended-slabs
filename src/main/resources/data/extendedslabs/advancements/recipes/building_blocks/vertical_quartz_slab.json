@@ -1,6 +1,7 @@
-{ "parent": "minecraft:recipes/root",
+{
+  "parent": "minecraft:recipes/root",
   "rewards": {
-    "recipes": [ 
+    "recipes": [
       "extendedslabs:vertical_quartz_slab"
     ]
   },

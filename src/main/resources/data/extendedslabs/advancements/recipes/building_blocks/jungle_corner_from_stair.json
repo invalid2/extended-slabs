@@ -10,7 +10,9 @@
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
-          { "item": "minecraft:jungle_stairs" }
+          {
+            "item": "minecraft:jungle_stairs"
+          }
         ]
       }
     },

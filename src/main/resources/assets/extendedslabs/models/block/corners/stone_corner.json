@@ -1,4 +1,5 @@
-{ "parent": "extendedslabs:block/corners/corner",
+{
+  "parent": "extendedslabs:block/corners/corner",
   "textures": {
     "block": "minecraft:block/stone"
   }

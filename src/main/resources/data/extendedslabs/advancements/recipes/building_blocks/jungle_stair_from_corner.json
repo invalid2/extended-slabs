@@ -10,7 +10,9 @@
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
-          { "item": "extendedslabs:jungle_corner" }
+          {
+            "item": "extendedslabs:jungle_corner"
+          }
         ]
       }
     },

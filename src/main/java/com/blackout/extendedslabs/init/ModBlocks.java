@@ -42,7 +42,7 @@ public class ModBlocks {
             register(Slab.getName() + "_slab", Slab.getSlab());
         }
 
-        GRASS_STAIRS = register("grass_stairs", new BlockGrassStairs(Blocks.GRASS_BLOCK.getDefaultState() ,Block.Properties.from(Blocks.GRASS_BLOCK)));
+        GRASS_STAIRS = register("grass_stairs", new BlockGrassStairs(Blocks.GRASS_BLOCK.getDefaultState(), Block.Properties.from(Blocks.GRASS_BLOCK)));
 
         for (ModStairs Stairs : ModStairs.VALUES) {
             register(Stairs.getName() + "_stairs", Stairs.getStairs());

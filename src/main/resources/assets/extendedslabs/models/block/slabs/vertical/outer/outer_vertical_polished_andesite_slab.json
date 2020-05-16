@@ -1,4 +1,5 @@
-{ "parent": "extendedslabs:block/slabs/vertical/outer/outer_vertical_slab",
+{
+  "parent": "extendedslabs:block/slabs/vertical/outer/outer_vertical_slab",
   "textures": {
     "bottom": "minecraft:block/polished_andesite",
     "top": "minecraft:block/polished_andesite",

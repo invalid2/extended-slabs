@@ -1,6 +1,9 @@
-{ "type": "minecraft:crafting_shapeless",
+{
+  "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    { "item": "extendedslabs:vertical_dirt_slab" }
+    {
+      "item": "extendedslabs:vertical_dirt_slab"
+    }
   ],
   "result": {
     "item": "extendedslabs:dirt_slab"

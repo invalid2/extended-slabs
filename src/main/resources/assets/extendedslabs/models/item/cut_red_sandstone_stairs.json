@@ -1,1 +1,3 @@
-{ "parent": "extendedslabs:block/stairs/regular/cut_red_sandstone_stairs" }
+{
+  "parent": "extendedslabs:block/stairs/regular/cut_red_sandstone_stairs"
+}

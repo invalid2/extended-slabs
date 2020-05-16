@@ -1,4 +1,5 @@
-{ "type": "crafting_shaped",
+{
+  "type": "crafting_shaped",
   "pattern": [
     "BBB"
   ],

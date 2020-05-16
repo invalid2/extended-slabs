@@ -1,7 +1,13 @@
-{ 
+{
   "variants": {
-    "type=bottom": { "model": "extendedslabs:block/slabs/regular/andesite_slab" },
-    "type=top": { "model": "extendedslabs:block/slabs/regular/andesite_slab_top" },
-    "type=double": { "model": "minecraft:block/andesite" }
+    "type=bottom": {
+      "model": "extendedslabs:block/slabs/regular/andesite_slab"
+    },
+    "type=top": {
+      "model": "extendedslabs:block/slabs/regular/andesite_slab_top"
+    },
+    "type=double": {
+      "model": "minecraft:block/andesite"
+    }
   }
 }

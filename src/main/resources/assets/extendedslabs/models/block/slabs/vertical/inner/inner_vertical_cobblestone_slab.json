@@ -1,4 +1,5 @@
-{ "parent": "extendedslabs:block/slabs/vertical/inner/inner_vertical_slab",
+{
+  "parent": "extendedslabs:block/slabs/vertical/inner/inner_vertical_slab",
   "textures": {
     "bottom": "minecraft:block/cobblestone",
     "top": "minecraft:block/cobblestone",

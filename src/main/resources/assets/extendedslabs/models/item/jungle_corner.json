@@ -1,1 +1,3 @@
-{ "parent": "extendedslabs:block/corners/jungle_corner" }
+{
+  "parent": "extendedslabs:block/corners/jungle_corner"
+}

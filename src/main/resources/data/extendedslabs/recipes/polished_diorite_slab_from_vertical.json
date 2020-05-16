@@ -1,6 +1,9 @@
-{ "type": "minecraft:crafting_shapeless",
+{
+  "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    { "item": "extendedslabs:vertical_polished_diorite_slab" }
+    {
+      "item": "extendedslabs:vertical_polished_diorite_slab"
+    }
   ],
   "result": {
     "item": "minecraft:polished_diorite_slab"

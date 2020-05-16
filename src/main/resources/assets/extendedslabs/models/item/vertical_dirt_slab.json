@@ -1,1 +1,3 @@
-{ "parent": "extendedslabs:block/slabs/vertical/vertical_dirt_slab" }
+{
+  "parent": "extendedslabs:block/slabs/vertical/vertical_dirt_slab"
+}

@@ -1,4 +1,5 @@
-{ "parent": "extendedslabs:block/slabs/vertical/outer/outer_vertical_slab",
+{
+  "parent": "extendedslabs:block/slabs/vertical/outer/outer_vertical_slab",
   "textures": {
     "bottom": "minecraft:block/mossy_stone_bricks",
     "top": "minecraft:block/mossy_stone_bricks",

@@ -1,7 +1,7 @@
-{ 
+{
   "parent": "minecraft:recipes/root",
   "rewards": {
-    "recipes": [ 
+    "recipes": [
       "extendedslabs:vertical_stone_slab"
     ]
   },
@@ -10,7 +10,9 @@
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
-          { "item": "minecraft:stone_slab" }
+          {
+            "item": "minecraft:stone_slab"
+          }
         ]
       }
     },

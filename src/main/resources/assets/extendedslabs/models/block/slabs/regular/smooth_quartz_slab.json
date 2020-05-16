@@ -1,4 +1,5 @@
-{ "parent": "minecraft:block/slab",
+{
+  "parent": "minecraft:block/slab",
   "textures": {
     "bottom": "minecraft:block/quartz_block_top",
     "top": "minecraft:block/quartz_block_top",

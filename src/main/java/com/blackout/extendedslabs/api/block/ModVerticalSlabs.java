@@ -61,11 +61,19 @@ public enum ModVerticalSlabs {
         Item = new LazyValue<>(() -> new Item(new Item.Properties().group(ExtendedSlabs.GROUP)));
     }
 
-    public Block getVerticalSlab() { return VerticalSlab.getValue(); }
+    public Block getVerticalSlab() {
+        return VerticalSlab.getValue();
+    }
 
-    public Item getItem() { return Item.getValue(); }
+    public Item getItem() {
+        return Item.getValue();
+    }
 
-    public String getName() { return name().toLowerCase(Locale.ROOT); }
+    public String getName() {
+        return name().toLowerCase(Locale.ROOT);
+    }
 
-    public Block getBaseBlock() { return this.baseBlock; }
+    public Block getBaseBlock() {
+        return this.baseBlock;
+    }
 }

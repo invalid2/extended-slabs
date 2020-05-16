@@ -1,7 +1,10 @@
-{ "type": "minecraft:crafting_shapeless",
+{
+  "type": "minecraft:crafting_shapeless",
   "group": "wooden_slab",
   "ingredients": [
-    { "item": "extendedslabs:jungle_corner" }
+    {
+      "item": "extendedslabs:jungle_corner"
+    }
   ],
   "result": {
     "item": "minecraft:jungle_stairs"

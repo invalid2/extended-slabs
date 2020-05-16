@@ -1,6 +1,9 @@
-{ "type": "minecraft:crafting_shapeless",
+{
+  "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    { "item": "extendedslabs:vertical_prismarine_slab" }
+    {
+      "item": "extendedslabs:vertical_prismarine_slab"
+    }
   ],
   "result": {
     "item": "minecraft:prismarine_slab"

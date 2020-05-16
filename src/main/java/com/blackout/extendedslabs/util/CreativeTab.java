@@ -6,7 +6,9 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
 public class CreativeTab extends ItemGroup {
-    public CreativeTab() { super(ExtendedSlabs.MODID); }
+    public CreativeTab() {
+        super(ExtendedSlabs.MODID);
+    }
 
     @Override
     public ItemStack createIcon() {

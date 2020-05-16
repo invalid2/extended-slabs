@@ -1,1 +1,3 @@
-{ "parent": "extendedslabs:block/slabs/regular/andesite_slab" }
+{
+  "parent": "extendedslabs:block/slabs/regular/andesite_slab"
+}

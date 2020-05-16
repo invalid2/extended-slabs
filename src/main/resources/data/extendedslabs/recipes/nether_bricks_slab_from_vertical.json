@@ -1,6 +1,9 @@
-{ "type": "minecraft:crafting_shapeless",
+{
+  "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    { "item": "extendedslabs:vertical_nether_bricks_slab" }
+    {
+      "item": "extendedslabs:vertical_nether_bricks_slab"
+    }
   ],
   "result": {
     "item": "minecraft:nether_brick_slab"

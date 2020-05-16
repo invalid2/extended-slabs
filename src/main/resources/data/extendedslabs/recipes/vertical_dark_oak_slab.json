@@ -1,7 +1,10 @@
-{ "type": "minecraft:crafting_shapeless",
+{
+  "type": "minecraft:crafting_shapeless",
   "group": "wooden_vertical_slab",
   "ingredients": [
-    { "item": "minecraft:dark_oak_slab" }
+    {
+      "item": "minecraft:dark_oak_slab"
+    }
   ],
   "result": {
     "item": "extendedslabs:vertical_dark_oak_slab"

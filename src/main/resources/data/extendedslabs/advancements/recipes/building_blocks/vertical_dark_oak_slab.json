@@ -1,4 +1,5 @@
-{ "parent": "minecraft:recipes/root",
+{
+  "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
       "extendedslabs:vertical_dark_oak_slab"

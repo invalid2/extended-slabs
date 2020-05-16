@@ -10,7 +10,9 @@
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
-          { "item": "minecraft:birch_stairs" }
+          {
+            "item": "minecraft:birch_stairs"
+          }
         ]
       }
     },

@@ -1,1 +1,3 @@
-{ "parent": "extendedslabs:block/slabs/regular/stone_slab" }
+{
+  "parent": "extendedslabs:block/slabs/regular/stone_slab"
+}

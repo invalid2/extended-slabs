@@ -10,7 +10,9 @@
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
-          { "item": "extendedslabs:birch_corner" }
+          {
+            "item": "extendedslabs:birch_corner"
+          }
         ]
       }
     },

@@ -1,6 +1,9 @@
-{ "type": "minecraft:crafting_shapeless",
+{
+  "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    { "item": "extendedslabs:vertical_sandstone_slab" }
+    {
+      "item": "extendedslabs:vertical_sandstone_slab"
+    }
   ],
   "result": {
     "item": "minecraft:sandstone_slab"

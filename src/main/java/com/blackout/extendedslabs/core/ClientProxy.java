@@ -23,10 +23,13 @@ public class ClientProxy extends CommonProxy {
                 ModBlocks.GRASS_SLAB, ModBlocks.VERTICAL_GRASS_SLAB, ModBlocks.GRASS_STAIRS);
 
         itemcolors.register((stack, tintindex) -> {
-                    BlockState iblockstate = ((BlockItem)stack.getItem()).getBlock().getDefaultState();
-                    return blockcolors.getColor(iblockstate, null, null, 1); },
+                    BlockState iblockstate = ((BlockItem) stack.getItem()).getBlock().getDefaultState();
+                    return blockcolors.getColor(iblockstate, null, null, 1);
+                },
                 ModBlocks.GRASS_SLAB, ModBlocks.VERTICAL_GRASS_SLAB, ModBlocks.GRASS_STAIRS);
     }
 
-    public World getClientWorld() { return MC.world; }
+    public World getClientWorld() {
+        return MC.world;
+    }
 }
