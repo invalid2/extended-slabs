@@ -29,14 +29,14 @@ public class BlockVerticalSlab extends Block implements IWaterLoggable {
     public static final EnumProperty<VerticalSlabShape> SHAPE = EnumProperty.create("shape", VerticalSlabShape.class);
 
     protected static final VoxelShape NORTH_SHAPE = Block.makeCuboidShape(0.0D, 16.0D, 0.0D, 16.0D, 0.0D, 8.0D);
-    protected static final VoxelShape EAST_SHAPE = Block.makeCuboidShape(8.0D, 16.0D, 0.0D, 16.0D, 0.0D, 16.0D);
+    protected static final VoxelShape EAST_SHAPE  = Block.makeCuboidShape(8.0D, 16.0D, 0.0D, 16.0D, 0.0D, 16.0D);
     protected static final VoxelShape SOUTH_SHAPE = Block.makeCuboidShape(0.0D, 16.0D, 16.0D, 16.0D, 0.0D, 8.0D);
-    protected static final VoxelShape WEST_SHAPE = Block.makeCuboidShape(0.0D, 16.0D, 0.0D, 8.0D, 0.0D, 16.0D);
+    protected static final VoxelShape WEST_SHAPE  = Block.makeCuboidShape(0.0D, 16.0D, 0.0D, 8.0D, 0.0D, 16.0D);
 
-    protected static final VoxelShape NORTH_OUTER_SHAPE = Block.makeCuboidShape(0.0D, 16.0D, 0.0D, 8.0D, 0.0D, 8.0D);
-    protected static final VoxelShape EAST_OUTER_SHAPE = Block.makeCuboidShape(8.0D, 16.0D, 0.0D, 16.0D, 0.0D, 8.0D);
-    protected static final VoxelShape SOUTH_OUTER_SHAPE = Block.makeCuboidShape(8.0D, 16.0D, 16.0D, 16.0D, 0.0D, 8.0D);
-    protected static final VoxelShape WEST_OUTER_SHAPE = Block.makeCuboidShape(0.0D, 16.0D, 8.0D, 8.0D, 0.0D, 16.0D);
+    protected static final VoxelShape NORTH_OUTER_SHAPE  = Block.makeCuboidShape(0.0D, 16.0D, 0.0D, 8.0D, 0.0D, 8.0D);
+    protected static final VoxelShape EAST_OUTER_SHAPE  = Block.makeCuboidShape(8.0D, 16.0D, 0.0D, 16.0D, 0.0D, 8.0D);
+    protected static final VoxelShape SOUTH_OUTER_SHAPE  = Block.makeCuboidShape(8.0D, 16.0D, 16.0D, 16.0D, 0.0D, 8.0D);
+    protected static final VoxelShape WEST_OUTER_SHAPE  = Block.makeCuboidShape(0.0D, 16.0D, 8.0D, 8.0D, 0.0D, 16.0D);
 
     public BlockVerticalSlab(Block.Properties builder) {
         super(builder);
@@ -55,7 +55,7 @@ public class BlockVerticalSlab extends Block implements IWaterLoggable {
         Direction enumfacing = state.get(FACING);
 
         if (verticalslabshape != VerticalSlabShape.STRAIGHT) {
-            switch (verticalslabshape) {
+            switch(verticalslabshape) {
                 case OUTER_LEFT:
                     return getOuterLeftFacingShapes(enumfacing);
                 case OUTER_RIGHT:

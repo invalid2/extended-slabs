@@ -16,7 +16,10 @@ public enum ModCorners {
     JUNGLE(Blocks.JUNGLE_STAIRS),
     OAK(Blocks.OAK_STAIRS),
     SPRUCE(Blocks.SPRUCE_STAIRS),
-    STONE(Blocks.STONE_STAIRS);
+    STONE(Blocks.STONE_STAIRS),
+    ANDESITE(Blocks.ANDESITE),
+    GRANITE(Blocks.GRANITE),
+    DIORITE(Blocks.DIORITE);
 
     public static final ModCorners[] VALUES = values();
 

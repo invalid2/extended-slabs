@@ -4,10 +4,9 @@ import com.blackout.extendedslabs.api.block.ModCorners;
 import com.blackout.extendedslabs.api.block.ModSlabs;
 import com.blackout.extendedslabs.api.block.ModStairs;
 import com.blackout.extendedslabs.api.block.ModVerticalSlabs;
-import com.blackout.extendedslabs.blocks.grass.BlockGrassStairs;
+import com.blackout.extendedslabs.blocks.grass.BlockGrassSlab;
 import com.blackout.extendedslabs.blocks.grass.BlockVerticalGrassSlab;
 import com.blackout.extendedslabs.core.ExtendedSlabs;
-import com.blackout.extendedslabs.blocks.grass.BlockGrassSlab;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
@@ -41,8 +40,6 @@ public class ModBlocks {
         for (ModSlabs Slab : ModSlabs.VALUES) {
             register(Slab.getName() + "_slab", Slab.getSlab());
         }
-
-        GRASS_STAIRS = register("grass_stairs", new BlockGrassStairs(Blocks.GRASS_BLOCK.getDefaultState(), Block.Properties.from(Blocks.GRASS_BLOCK)));
 
         for (ModStairs Stairs : ModStairs.VALUES) {
             register(Stairs.getName() + "_stairs", Stairs.getStairs());

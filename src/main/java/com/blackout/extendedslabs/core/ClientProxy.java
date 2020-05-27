@@ -11,7 +11,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeColors;
 
 public class ClientProxy extends CommonProxy {
-    protected static Minecraft MC = Minecraft.getInstance();
 
     @Override
     public void init() {
@@ -20,16 +19,16 @@ public class ClientProxy extends CommonProxy {
 
         blockcolors.register((state, world, pos, tintindex) ->
                         world != null && pos != null ? BiomeColors.getGrassColor(world, pos) : GrassColors.get(0.5D, 1.0D),
-                ModBlocks.GRASS_SLAB, ModBlocks.VERTICAL_GRASS_SLAB, ModBlocks.GRASS_STAIRS);
+                ModBlocks.GRASS_SLAB, ModBlocks.VERTICAL_GRASS_SLAB);
 
         itemcolors.register((stack, tintindex) -> {
                     BlockState iblockstate = ((BlockItem) stack.getItem()).getBlock().getDefaultState();
                     return blockcolors.getColor(iblockstate, null, null, 1);
                 },
-                ModBlocks.GRASS_SLAB, ModBlocks.VERTICAL_GRASS_SLAB, ModBlocks.GRASS_STAIRS);
+                ModBlocks.GRASS_SLAB, ModBlocks.VERTICAL_GRASS_SLAB);
     }
 
     public World getClientWorld() {
-        return MC.world;
+        return Minecraft.getInstance().world;
     }
 }

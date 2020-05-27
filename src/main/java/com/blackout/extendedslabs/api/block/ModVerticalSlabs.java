@@ -11,12 +11,6 @@ import java.util.Locale;
 
 public enum ModVerticalSlabs {
 
-    DARK_OAK(Blocks.DARK_OAK_SLAB),
-    SPRUCE(Blocks.SPRUCE_PLANKS),
-    ACACIA(Blocks.ACACIA_SLAB),
-    JUNGLE(Blocks.JUNGLE_SLAB),
-    BIRCH(Blocks.BIRCH_SLAB),
-    OAK(Blocks.OAK_SLAB),
     COBBLESTONE(Blocks.COBBLESTONE_SLAB),
     STONE_BRICKS(Blocks.STONE_BRICK_SLAB),
     SMOOTH_STONE(Blocks.SMOOTH_STONE),
@@ -60,6 +54,7 @@ public enum ModVerticalSlabs {
         VerticalSlab = new LazyValue<>(() -> new BlockVerticalSlab(Block.Properties.from(getBaseBlock())));
         Item = new LazyValue<>(() -> new Item(new Item.Properties().group(ExtendedSlabs.GROUP)));
     }
+
 
     public Block getVerticalSlab() {
         return VerticalSlab.getValue();

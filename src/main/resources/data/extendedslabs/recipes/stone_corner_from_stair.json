@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "stone",
+  "group": "wooden_slab",
   "ingredients": [
     {
       "item": "minecraft:stone_stairs"

@@ -6,11 +6,11 @@ issueTrackerURL="https://github.com/Blackout03/extended-slabs/issues"
     modId="extendedslabs"
     version="${file.jarVersion}"
     displayName="Extended Slabs"
-    displayURL="https://thinkverse.dev"
-    updateJSONURL="https://thinkverse.dev/extended-slabs/update"
-    logoFile="examplemod.png"
-    credits="Clownvin, HarryTechRevs, SilentChaos512 & Champion Ash5357"
-    authors="Thinkverse"
+    displayURL="https://blackout03.c1.biz"
+    updateJSONURL="http://blackout03.c1.biz/mods/extendedslabs/update.json"
+    logoFile="icon.png"
+    credits="Thinkverse"
+    authors="Blackout03"
     description='''This mod adds vertical slabs and more to Minecraft.'''
 
 [[dependencies.versecraft]]

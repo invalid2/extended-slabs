@@ -12,6 +12,6 @@ public class CreativeTab extends ItemGroup {
 
     @Override
     public ItemStack createIcon() {
-        return new ItemStack(ModVerticalSlabs.OAK.getVerticalSlab());
+        return new ItemStack(ModVerticalSlabs.PRISMARINE_BRICKS.getVerticalSlab());
     }
 }
