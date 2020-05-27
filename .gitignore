@@ -13,9 +13,14 @@ out
 *.iml
 .idea
 
+# gradlew
+gradlew
+gradlew.bat
+
 # gradle
 build
 .gradle
+gradle
 
 # other
 eclipse
