@@ -7,20 +7,20 @@ issueTrackerURL="https://github.com/Blackout03/extended-slabs/issues"
     version="${file.jarVersion}"
     displayName="Extended Slabs"
     displayURL="https://blackout03.c1.biz"
-    updateJSONURL="http://blackout03.c1.biz/mods/extendedslabs/update.json"
+    updateJSONURL="https://raw.githubusercontent.com/Blackout03/extended-slabs/1.15.2/update.json"
     logoFile="icon.png"
     credits="Thinkverse"
     authors="Blackout03"
     description='''This mod adds vertical slabs and more to Minecraft.'''
 
-[[dependencies.versecraft]]
+[[dependencies.extendedslabs]]
     modId="forge"
     mandatory=true
     versionRange="[31,)"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.versecraft]]
+[[dependencies.extendedslabs]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.15.2]"
