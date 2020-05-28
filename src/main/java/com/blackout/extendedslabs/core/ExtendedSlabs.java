@@ -1,5 +1,6 @@
 package com.blackout.extendedslabs.core;
 
+import com.blackout.extendedslabs.api.block.ModVerticalSlabs;
 import com.blackout.extendedslabs.api.block.ModVerticalSlabsTest;
 import com.blackout.extendedslabs.render.block.BlockRenderLayer;
 import com.blackout.extendedslabs.util.CreativeTab;

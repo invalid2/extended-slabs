@@ -54,6 +54,7 @@
   "block.extendedslabs.vertical_jungle_slab": "Vertical Jungle Slab",
   "block.extendedslabs.vertical_birch_slab": "Vertical Birch Slab",
   "block.extendedslabs.vertical_oak_slab": "Vertical Oak Slab",
+  "block.extendedslabs.vertical_petrified_oak_slab": "Vertical Petrified Oak Slab",
   "block.extendedslabs.vertical_grass_slab": "Vertical Grass Slab",
   "block.extendedslabs.vertical_cobblestone_slab": "Vertical Cobblestone Slab",
   "block.extendedslabs.vertical_stone_bricks_slab": "Vertical Stone Bricks Slab",
@@ -89,5 +90,10 @@
   "block.extendedslabs.vertical_fir_slab": "Vertical Fir Slab",
   "block.extendedslabs.vertical_hellbark_slab": "Vertical Hellbark Slab",
   "block.extendedslabs.vertical_jacaranda_slab": "Vertical Jacaranda Slab",
-  "block.extendedslabs.vertical_magic_slab": "Vertical Magic Slab"
+  "block.extendedslabs.vertical_magic_slab": "Vertical Magic Slab",
+  "block.extendedslabs.vertical_mahogany_slab": "Vertical Mahogany Slab",
+  "block.extendedslabs.vertical_palm_slab": "Vertical Palm Slab",
+  "block.extendedslabs.vertical_redwood_slab": "Vertical Redwood Slab",
+  "block.extendedslabs.vertical_umbran_slab": "Vertical Umbran Slab",
+  "block.extendedslabs.vertical_willow_slab": "Vertical Willow Slab"
 }
