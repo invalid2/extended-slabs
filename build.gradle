@@ -14,8 +14,8 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 version = project.major + "." + project.minor + "." + project.patch
-group = 'com.blackout.extendedslabs' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'ExtendedSlabs-1.15.2'
+group = project.modGroup // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = project.modName
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 

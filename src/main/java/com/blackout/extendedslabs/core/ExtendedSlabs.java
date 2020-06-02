@@ -1,6 +1,5 @@
 package com.blackout.extendedslabs.core;
 
-import com.blackout.extendedslabs.api.block.ModVerticalSlabs;
 import com.blackout.extendedslabs.api.block.ModVerticalSlabsTest;
 import com.blackout.extendedslabs.render.block.BlockRenderLayer;
 import com.blackout.extendedslabs.util.CreativeTab;
@@ -11,7 +10,9 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModContainer;
 import net.minecraftforge.fml.ModList;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -23,7 +24,8 @@ import java.util.Optional;
 @Mod(ExtendedSlabs.MODID)
 public class ExtendedSlabs {
     public static final String MODID = "extendedslabs";
-    public static final String VERSION = "1.2.0";
+    public static final String MODNAME = "Extended Slabs";
+    public static final String VERSION = "1.3.0";
 
     public static ExtendedSlabs INSTANCE;
 
@@ -34,9 +36,11 @@ public class ExtendedSlabs {
 
     public ExtendedSlabs() {
         INSTANCE = this;
+
         if (ModList.get().isLoaded("biomesoplenty")) ModVerticalSlabsTest.registerBOPCompat();
         if (ModList.get().isLoaded("biomesoplenty")) LOGGER.debug("MOD: 'Biomes O' Plenty' FOUND!");
         if (!ModList.get().isLoaded("biomesoplenty")) LOGGER.debug("MOD: 'Biomes O' Plenty' NOT FOUND!");
+
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModVerticalSlabsTest.ITEMS.register(eventBus);
         ModVerticalSlabsTest.BLOCKS.register(eventBus);
