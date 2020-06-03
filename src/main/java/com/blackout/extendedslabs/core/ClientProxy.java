@@ -1,6 +1,5 @@
 package com.blackout.extendedslabs.core;
 
-import com.blackout.extendedslabs.config.Config;
 import com.blackout.extendedslabs.init.ModBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.Minecraft;
@@ -16,9 +15,7 @@ public class ClientProxy extends CommonProxy {
 
     @Override
     public void init() {
-        if (!Config.versionChecker) {
-            MinecraftForge.EVENT_BUS.register(EventHandler.INSTANCE);
-        }
+        MinecraftForge.EVENT_BUS.register(EventHandler.INSTANCE);
 
         BlockColors blockcolors = Minecraft.getInstance().getBlockColors();
         ItemColors itemcolors = Minecraft.getInstance().getItemColors();
