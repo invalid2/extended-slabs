@@ -1,5 +1,3 @@
-.gitignore
-
 # eclipse
 bin
 *.launch
@@ -15,22 +13,15 @@ out
 *.iml
 .idea
 
-# gradlew
-gradlew
-gradlew.bat
-
 # gradle
 build
 .gradle
-gradle
 
 # other
 eclipse
 run
-.DS_Store
 
 # Files from Forge MDK
 forge*changelog.txt
-
-# build
-mcmodsrepo
+.DS_Store
+src/test/
