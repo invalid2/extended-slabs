@@ -11,6 +11,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeColors;
 import net.minecraftforge.common.MinecraftForge;
 
+import static com.blackout.extendedslabs.core.ExtendedSlabs.LOGGER;
+
 public class ClientProxy extends CommonProxy {
 
     @Override
