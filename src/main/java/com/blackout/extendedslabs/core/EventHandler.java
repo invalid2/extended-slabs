@@ -1,6 +1,8 @@
 package com.blackout.extendedslabs.core;
 
-import net.minecraft.util.text.*;
+import net.minecraft.util.Util;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.client.event.ClientPlayerNetworkEvent.LoggedInEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
@@ -21,8 +23,8 @@ public class EventHandler {
         Status result = versionRAW.status;
 
         if (!(result.equals(Status.UP_TO_DATE) || result.equals(Status.PENDING) || result.equals(Status.AHEAD))) {
-            Objects.requireNonNull(event.getPlayer()).sendMessage(new StringTextComponent(TextFormatting.GREEN + "[" + ExtendedSlabs.MODNAME + "] " + TextFormatting.WHITE + "A new version is available: (" + versionRAW.target + "), Please Update!"));
-            event.getPlayer().sendMessage(new StringTextComponent(TextFormatting.YELLOW + "Changelog:"));
+            Objects.requireNonNull(event.getPlayer()).sendMessage(new StringTextComponent(TextFormatting.GREEN + "" + TextFormatting.BOLD + "[" + ExtendedSlabs.MODNAME + "] " + TextFormatting.WHITE + "" + TextFormatting.BOLD + "A new version is available: (" + versionRAW.target + "), Please Update!"), Util.DUMMY_UUID);
+            event.getPlayer().sendMessage(new StringTextComponent(TextFormatting.YELLOW + "" + TextFormatting.BOLD + "Changelog:"), Util.DUMMY_UUID);
 
             assert versionRAW.changes != null;
             String changes = versionRAW.changes.get(versionRAW.target);
@@ -30,15 +32,15 @@ public class EventHandler {
                 String[] changesFormat = changes.split("\n");
 
                 for (String change : changesFormat) {
-                    event.getPlayer().sendMessage(new StringTextComponent(TextFormatting.WHITE + "- " + change));
+                    event.getPlayer().sendMessage(new StringTextComponent(TextFormatting.WHITE + "" + TextFormatting.BOLD + "- " + change), Util.DUMMY_UUID);
                 }
                 if (versionRAW.changes.size() > 1) {
-                    event.getPlayer().sendMessage(new StringTextComponent(TextFormatting.WHITE + "- And more..."));
+                    event.getPlayer().sendMessage(new StringTextComponent(TextFormatting.WHITE + "" + TextFormatting.BOLD + "- And more..."), Util.DUMMY_UUID);
                 }
             }
         }
         if (result.equals(Status.AHEAD)) {
-            Objects.requireNonNull(event.getPlayer()).sendMessage(new StringTextComponent(TextFormatting.GREEN + "[" + ExtendedSlabs.MODNAME + "] " + TextFormatting.WHITE + "Version not released yet"));
+            Objects.requireNonNull(event.getPlayer()).sendMessage(new StringTextComponent(TextFormatting.GREEN + "" + TextFormatting.BOLD + "[" + ExtendedSlabs.MODNAME + "] " + TextFormatting.WHITE + "" + TextFormatting.BOLD + "Version not released yet"), Util.DUMMY_UUID);
         }
     }
 }

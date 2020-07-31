@@ -1,11 +1,13 @@
 package com.blackout.extendedslabs.blocks;
 
 import com.blackout.extendedslabs.blocks.shapes.VerticalSlabShape;
-import net.minecraft.block.*;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.HorizontalBlock;
+import net.minecraft.block.IWaterLoggable;
 import net.minecraft.fluid.Fluid;
+import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.fluid.IFluidState;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.DirectionProperty;
@@ -141,7 +143,7 @@ public class BlockVerticalSlab extends Block implements IWaterLoggable {
         @Override
         public BlockState getStateForPlacement(BlockItemUseContext context) {
                 Direction enumfacing = context.getFace();
-                IFluidState ifluidstate = context.getWorld().getFluidState(context.getPos());
+                FluidState ifluidstate = context.getWorld().getFluidState(context.getPos());
                 BlockState iblockstate = this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing()).with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
                 return iblockstate.with(SHAPE, getSlabShape(iblockstate, context.getWorld(), context.getPos()));
         }
@@ -197,7 +199,7 @@ public class BlockVerticalSlab extends Block implements IWaterLoggable {
 
         @Override
         @SuppressWarnings("deprecation")
-        public IFluidState getFluidState(BlockState state) {
+        public FluidState getFluidState(BlockState state) {
                 return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
         }
 
@@ -207,7 +209,7 @@ public class BlockVerticalSlab extends Block implements IWaterLoggable {
         }
 
         @Override
-        public boolean receiveFluid(IWorld worldIn, BlockPos pos, BlockState state, IFluidState fluidStateIn) {
+        public boolean receiveFluid(IWorld worldIn, BlockPos pos, BlockState state, FluidState fluidStateIn) {
                 return IWaterLoggable.super.receiveFluid(worldIn, pos, state, fluidStateIn);
         }
 

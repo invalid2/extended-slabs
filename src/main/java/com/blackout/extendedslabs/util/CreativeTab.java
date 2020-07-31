@@ -26,10 +26,9 @@ public class CreativeTab extends ItemGroup {
 
     public net.minecraft.util.ResourceLocation getBackgroundImage() {
         return new net.minecraft.util.ResourceLocation("extendedslabs:textures/gui/container/creative_inventory/tab_extendedslabs.png");
-    };
+    }
 
     public net.minecraft.util.ResourceLocation getTabsImage() {
         return new net.minecraft.util.ResourceLocation("extendedslabs:textures/gui/container/creative_inventory/tabs.png");
-    };
-
+    }
 }

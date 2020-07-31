@@ -23,7 +23,7 @@ import java.util.Optional;
 public class ExtendedSlabs {
     public static final String MODID = "extendedslabs";
     public static final String MODNAME = "Extended Slabs";
-    public static final String VERSION = "1.3.0";
+    public static final String VERSION = "1.4.0";
 
     public static ExtendedSlabs INSTANCE;
 

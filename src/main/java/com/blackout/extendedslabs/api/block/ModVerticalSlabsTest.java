@@ -17,8 +17,8 @@ import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(modid = ExtendedSlabs.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModVerticalSlabsTest {
-    public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, ExtendedSlabs.MODID);
-    public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, ExtendedSlabs.MODID);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ExtendedSlabs.MODID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ExtendedSlabs.MODID);
 
     public static final RegistryObject<Block> OAK_VERTICAL = registerBlock("vertical_oak_slab",() -> new BlockVerticalSlab(Block.Properties.from(Blocks.OAK_SLAB)), ExtendedSlabs.GROUP);
     public static final RegistryObject<Block> SPRUCE_VERTICAL = registerBlock("vertical_spruce_slab",() -> new BlockVerticalSlab(Block.Properties.from(Blocks.SPRUCE_SLAB)), ExtendedSlabs.GROUP);
@@ -26,6 +26,8 @@ public class ModVerticalSlabsTest {
     public static final RegistryObject<Block> JUNGLE_VERTICAL = registerBlock("vertical_jungle_slab",() -> new BlockVerticalSlab(Block.Properties.from(Blocks.JUNGLE_SLAB)), ExtendedSlabs.GROUP);
     public static final RegistryObject<Block> ACACIA_VERTICAL = registerBlock("vertical_acacia_slab",() -> new BlockVerticalSlab(Block.Properties.from(Blocks.ACACIA_SLAB)), ExtendedSlabs.GROUP);
     public static final RegistryObject<Block> DARK_OAK_VERTICAL = registerBlock("vertical_dark_oak_slab",() -> new BlockVerticalSlab(Block.Properties.from(Blocks.DARK_OAK_SLAB)), ExtendedSlabs.GROUP);
+    public static final RegistryObject<Block> CRIMSON_VERTICAL = registerBlock("vertical_crimson_slab",() -> new BlockVerticalSlab(Block.Properties.from(Blocks.CRIMSON_SLAB)), ExtendedSlabs.GROUP);
+    public static final RegistryObject<Block> WARPED_VERTICAL = registerBlock("vertical_warped_slab",() -> new BlockVerticalSlab(Block.Properties.from(Blocks.WARPED_SLAB)), ExtendedSlabs.GROUP);
     public static final RegistryObject<Block> PETRIFIED_OAK_VERTICAL = registerBlock("vertical_petrified_oak_slab",() -> new BlockVerticalSlab(Block.Properties.from(Blocks.PETRIFIED_OAK_SLAB)), ExtendedSlabs.GROUP);
 
     public static RegistryObject<Block> CHERRY_VERTICAL = null;
