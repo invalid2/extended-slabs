@@ -25,3 +25,5 @@ run
 forge*changelog.txt
 .DS_Store
 src/test/
+logs/debug.log
+logs/latest.log

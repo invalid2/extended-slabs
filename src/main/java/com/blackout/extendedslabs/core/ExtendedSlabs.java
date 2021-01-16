@@ -1,6 +1,9 @@
 package com.blackout.extendedslabs.core;
 
-import com.blackout.extendedslabs.api.block.ModVerticalSlabsTest;
+import com.blackout.extendedslabs.api.block.ModCorners;
+import com.blackout.extendedslabs.api.block.ModSlabs;
+import com.blackout.extendedslabs.api.block.ModStairs;
+import com.blackout.extendedslabs.api.block.ModVerticalSlabs;
 import com.blackout.extendedslabs.render.block.BlockRenderLayer;
 import com.blackout.extendedslabs.util.CreativeTab;
 import net.minecraft.item.ItemGroup;
@@ -27,7 +30,7 @@ public class ExtendedSlabs {
 
     public static ExtendedSlabs INSTANCE;
 
-    public static CommonProxy PROXY = DistExecutor.runForDist(() -> ClientProxy::new, () -> CommonProxy::new);
+    public static CommonProxy PROXY = DistExecutor.safeRunForDist(() -> ClientProxy::new, () -> CommonProxy::new);
 
     public static final Logger LOGGER = LogManager.getLogger(MODID);
     public static final ItemGroup GROUP = new CreativeTab();
@@ -35,13 +38,22 @@ public class ExtendedSlabs {
     public ExtendedSlabs() {
         INSTANCE = this;
 
-        if (ModList.get().isLoaded("biomesoplenty")) ModVerticalSlabsTest.registerBOPCompat();
-        if (ModList.get().isLoaded("biomesoplenty")) LOGGER.debug("MOD: 'Biomes O' Plenty' FOUND!");
-        if (!ModList.get().isLoaded("biomesoplenty")) LOGGER.debug("MOD: 'Biomes O' Plenty' NOT FOUND!");
+        if (ModList.get().isLoaded("biomesoplenty")) ModVerticalSlabs.registerBOPCompat();
+        if (ModList.get().isLoaded("biomesoplenty")) ModCorners.registerBOPCompat();
+        if (ModList.get().isLoaded("biomesoplenty")) LOGGER.debug(ExtendedSlabs.MODID + ": Biomes O' Plenty Compat Loaded");
+        if (ModList.get().isLoaded("michrosia")) ModVerticalSlabs.registerMichrosiaCompat();
+        if (ModList.get().isLoaded("michrosia")) ModCorners.registerMichrosiaCompat();
+        if (ModList.get().isLoaded("michrosia")) LOGGER.debug(ExtendedSlabs.MODID + ": Michrosia Compat Loaded");
 
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        ModVerticalSlabsTest.ITEMS.register(eventBus);
-        ModVerticalSlabsTest.BLOCKS.register(eventBus);
+        ModCorners.ITEMS.register(eventBus);
+        ModCorners.BLOCKS.register(eventBus);
+        ModSlabs.ITEMS.register(eventBus);
+        ModSlabs.BLOCKS.register(eventBus);
+        ModStairs.ITEMS.register(eventBus);
+        ModStairs.BLOCKS.register(eventBus);
+        ModVerticalSlabs.ITEMS.register(eventBus);
+        ModVerticalSlabs.BLOCKS.register(eventBus);
         MinecraftForge.EVENT_BUS.register(this);
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);

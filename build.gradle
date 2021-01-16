@@ -1,70 +1,40 @@
 buildscript {
     repositories {
         maven { url = "https://files.minecraftforge.net/maven" }
+        maven { url = "https://dist.creeper.host/Sponge/maven" }
         jcenter()
         mavenCentral()
     }
-    // This is only here while FG is under active development
-    configurations.classpath {
-        resolutionStrategy {
-            cacheDynamicVersionsFor 10, "seconds"
-            cacheChangingModulesFor 0, "seconds"
-        }
-    }
     dependencies {
         classpath group: "net.minecraftforge.gradle", name: "ForgeGradle", version: "3.+", changing: true
+        classpath group: "org.spongepowered", name: "mixingradle", version: "0.7-SNAPSHOT"
     }
 }
 
-apply plugin: 'idea'
 apply plugin: "net.minecraftforge.gradle"
+apply plugin: "eclipse"
+apply plugin: "maven-publish"
+apply plugin: "org.spongepowered.mixin"
 
-//adds the build number to the end of the version string if on a build server
-String build_number = System.getenv().BUILD_NUMBER
-if (build_number == null) {
-    build_number = "9999"
+mixin {
+    add sourceSets.main, project.modId + ".refmap.json"
 }
 
-String semver = "${major}.${minor}.${patch}"
-version = "${semver}.${build_number}"
-group = project.modGroup // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = project.modName
+version = "${project.minecraft}-${project.modVersion}"
+group = 'com.blackout.extendedslabs'
+archivesBaseName = project.modId
 
-sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
-compileJava {
-    sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
-}
-
-repositories {
-    maven { url 'https://repo1.maven.org/maven2' }
-}
-
-sourceSets {
-    main
-    test
-}
-
-configurations {
-    apiCompile.extendsFrom(compile)
-}
-
-dependencies {
-    minecraft([
-            group  : "${project.forgeGroup}",
-            name   : "forge",
-            version: "${project.mcVersion}-${project.forgeVersion}"
-    ])
-}
+sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
 
 minecraft {
-    mappings channel: 'snapshot', version: project.mcpMappings
-
-    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
-
+    mappings channel: project.mappingsChannel, version: project.mappings
     runs {
         client {
-            property 'forge.logging.console.level', 'debug'
-            workingDirectory project.file('run')
+            workingDirectory project.file("run")
+            property "forge.logging.markers", "SCAN,REGISTRIES,REGISTRYDUMP"
+            property "forge.logging.console.level", "debug"
+            property "mixin.env.disableRefMap", "true"
+            arg "-mixin.config=extendedslabs.mixins.json"
             mods {
                 extendedslabs {
                     source sourceSets.main
@@ -72,8 +42,11 @@ minecraft {
             }
         }
         server {
-            property 'forge.logging.console.level', 'debug'
-            workingDirectory project.file('run')
+            workingDirectory project.file("run")
+            property "forge.logging.markers", "SCAN,REGISTRIES,REGISTRYDUMP"
+            property "forge.logging.console.level", "debug"
+            property "mixin.env.disableRefMap", "true"
+            arg "-mixin.config=extendedslabs.mixins.json"
             mods {
                 extendedslabs {
                     source sourceSets.main
@@ -81,9 +54,10 @@ minecraft {
             }
         }
         data {
-            property 'forge.logging.console.level', 'debug'
-            workingDirectory project.file('run')
-            args '--mod', 'extendedslabs', '--all', '--output', file('src/generated/resources/')
+            workingDirectory project.file("run")
+            property "forge.logging.markers", "SCAN,REGISTRIES,REGISTRYDUMP"
+            property "forge.logging.console.level", "debug"
+            args "--mod", "extendedslabs", "--all", "--output", file("src/generated/resources/")
             mods {
                 extendedslabs {
                     source sourceSets.main
@@ -93,64 +67,23 @@ minecraft {
     }
 }
 
-// prevent java 8's strict doclint for javadocs from failing builds
-if (JavaVersion.current().isJava8Compatible()) {
-    tasks.withType(Javadoc) {
-        options.addStringOption('Xdoclint:none', '-quiet')
-    }
+dependencies {
+    minecraft "net.minecraftforge:forge:${project.minecraft}-${project.forge}"
 }
+
+repositories { }
 
 jar {
-    from sourceSets.main.output.classesDirs
-    from sourceSets.main.output.resourcesDir
-
     manifest {
         attributes([
-                "Specification-Title": "Extended Slabs +",
-                "Specification-Vendor": "Blackout",
-                "Specification-Version": "1", // We are version 1 of ourselves
-                "Implementation-Title": project.name,
-                "Implementation-Version": version,
-                "Implementation-Vendor" :"Blackout",
-                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+                "Specification-Title"     : project.modName,
+                "Specification-Vendor"    : "Blackout",
+                "Specification-Version"   : "1",
+                "Implementation-Title"    : project.modName,
+                "Implementation-Version"  : project.modVersion,
+                "Implementation-Vendor"   : "Blackout",
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+                "MixinConfigs"            : project.modId + ".mixins.json"
         ])
-    }
-}
-
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = "javadoc"
-    from javadoc.destinationDir
-}
-
-task sourcesJar(type: Jar) {
-    classifier = "sources"
-    from sourceSets.main.allJava
-}
-
-artifacts {
-    archives javadocJar
-    archives sourcesJar
-}
-
-task("uploadJars", dependsOn: "build") {
-    description = "uploads JARs"
-    if (project.hasProperty("local_maven")) {
-        apply plugin: "maven"
-        uploadArchives {
-            repositories {
-                mavenDeployer {
-                    repository(url: "file://${local_maven}")
-                }
-            }
-        }
-    }
-}
-
-idea {
-    module {
-        for (String excludeDirName in ["run", "out", "logs", "gradle"]) {
-            File excludeDir = new File(projectDir, excludeDirName)
-            excludeDirs.add(excludeDir)
-        }
     }
 }

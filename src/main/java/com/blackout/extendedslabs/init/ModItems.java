@@ -23,14 +23,6 @@ public class ModItems {
         BLOCKS_TO_REGISTER.forEach(ModItems::register);
     }
 
-    /**
-     * Register the item. Also sets the registry name.
-     *
-     * @param name The path of the item ID
-     * @param item The item
-     * @param <T>  The item class
-     * @return The item
-     */
     private static <T extends Item> T register(String name, T item) {
         ResourceLocation id = ExtendedSlabs.location(name);
         item.setRegistryName(id);

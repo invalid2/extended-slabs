@@ -1,0 +1,17 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "B  ",
+    "BB ",
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:end_stone"
+    }
+  },
+  "result": {
+    "item": "extendedslabs:end_stone_stairs",
+    "count": 4
+  }
+}

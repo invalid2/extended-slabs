@@ -1,13 +1,15 @@
 modLoader="javafml"
-loaderVersion="[32,)"
+loaderVersion="[35,)"
 issueTrackerURL="https://github.com/Blackout03/extended-slabs/issues"
+displayURL=""
+license="MIT License"
 
 [[mods]]
     modId="extendedslabs"
     version="${file.jarVersion}"
     displayName="Extended Slabs"
-    displayURL="https://blackout03.c1.biz"
-    updateJSONURL="https://raw.githubusercontent.com/potatomodders/Version/master/extendedslabs_update.json"
+    displayURL="https://www.curseforge.com/minecraft/mc-mods/extended-slabs-1-15"
+    updateJSONURL="https://raw.githubusercontent.com/Blackout03/Version/master/extendedslabs_update.json"
     logoFile="icon.png"
     credits="Thinkverse"
     authors="Blackout03"
@@ -16,13 +18,13 @@ issueTrackerURL="https://github.com/Blackout03/extended-slabs/issues"
 [[dependencies.extendedslabs]]
     modId="forge"
     mandatory=true
-    versionRange="[32,)"
+    versionRange="[35,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.extendedslabs]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.1]"
+    versionRange="[1.16.3]"
     ordering="NONE"
     side="BOTH"

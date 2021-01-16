@@ -1,5 +1,5 @@
 <h1 align="center">
-  Welcome to Extended Slabs 👋
+  Welcome to Extended Slabs
 </h1>
 <p>
   <a href="https://github.com/Blackout03/extended-slabs#readme">
@@ -13,11 +13,11 @@
   </a>
 </p>
 
-### 🏠 [Homepage](http://blackout03.c1.biz/mods/)
+### 🏠 [Homepage](https://www.curseforge.com/minecraft/mc-mods/extended-slabs-1-15)
 
-> A mod that adds Vertical Slabs to minecraft!
+> A mod that adds Vertical Slabs and more to minecraft!
 
-### 📂 [Download](https://www.curseforge.com/minecraft/mc-mods/extended-slabs-1-15)
+### 📂 [Download](https://www.curseforge.com/minecraft/mc-mods/extended-slabs-1-15/files)
 
 <p>
   <img src="http://cf.way2muchnoise.eu/full_extended-slabs-1-15_downloads.svg" />
@@ -38,7 +38,7 @@ Contributions, issues and feature requests are welcome !<br />Feel free to check
 
 ## 📝 License
 
-Copyright © 2020 [Blackout03](https://github.com/Blackout03).<br />
+Copyright © 2021 [Blackout03](https://github.com/Blackout03) <br />
 This project is [MIT](https://github.com/Blackout03/extended-slabs/blob/master/LICENSE) licensed.
 
 ***

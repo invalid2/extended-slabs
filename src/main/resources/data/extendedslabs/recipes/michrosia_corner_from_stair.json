@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_slab",
+  "ingredients": [
+    {
+      "item": "michrosia:michrosia_stairs"
+    }
+  ],
+  "result": {
+    "item": "extendedslabs:michrosia_corner"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "michrosia"
+    }
+  ]
+}
