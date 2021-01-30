@@ -11,6 +11,8 @@
       ],
       "conditions": [
         {
+          "type": "forge:mod_loaded",
+          "modid": "biomesoplenty",
           "condition": "minecraft:survives_explosion"
         }
       ],
