@@ -13,15 +13,15 @@
   </a>
 </p>
 
-### 🏠 [Homepage](https://www.curseforge.com/minecraft/mc-mods/extended-slabs-1-15)
+### 🏠 [Homepage](https://www.curseforge.com/minecraft/mc-mods/extended-slabs-plus)
 
 > A mod that adds Vertical Slabs and more to minecraft!
 
-### 📂 [Download](https://www.curseforge.com/minecraft/mc-mods/extended-slabs-1-15/files)
+### 📂 [Download](https://www.curseforge.com/minecraft/mc-mods/extended-slabs-plus/files)
 
 <p>
-  <img src="http://cf.way2muchnoise.eu/full_extended-slabs-1-15_downloads.svg" />
-  <img src="http://cf.way2muchnoise.eu/versions/For%20MC_extended-slabs-1-15_all.svg" />
+  <img src="http://cf.way2muchnoise.eu/full_extended-slabs-plus_downloads.svg" />
+  <img src="http://cf.way2muchnoise.eu/versions/For%20MC_extended-slabs-plus_all.svg" />
 </p>
 
 ## Author
