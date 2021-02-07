@@ -23,15 +23,27 @@ public class ModCorners {
 
     // Stone
     public static final RegistryObject<Block> STONE_CORNER = registerBlock("stone_corner",() -> new BlockCorners(Block.Properties.from(Blocks.STONE_SLAB)), ExtendedSlabs.GROUP);
+    public static final RegistryObject<Block> COBBLESTONE_CORNER = registerBlock("cobblestone_corner",() -> new BlockCorners(Block.Properties.from(Blocks.COBBLESTONE_SLAB)), ExtendedSlabs.GROUP);
+    public static final RegistryObject<Block> STONE_BRICKS_CORNER = registerBlock("stone_bricks_corner",() -> new BlockCorners(Block.Properties.from(Blocks.STONE_BRICK_SLAB)), ExtendedSlabs.GROUP);
     public static final RegistryObject<Block> ANDESITE_CORNER = registerBlock("andesite_corner",() -> new BlockCorners(Block.Properties.from(Blocks.ANDESITE_SLAB)), ExtendedSlabs.GROUP);
+    public static final RegistryObject<Block> POLISHED_ANDESITE_CORNER = registerBlock("polished_andesite_corner",() -> new BlockCorners(Block.Properties.from(Blocks.POLISHED_ANDESITE_SLAB)), ExtendedSlabs.GROUP);
     public static final RegistryObject<Block> DIORITE_CORNER = registerBlock("diorite_corner",() -> new BlockCorners(Block.Properties.from(Blocks.DIORITE_SLAB)), ExtendedSlabs.GROUP);
+    public static final RegistryObject<Block> POLISHED_DIORITE_CORNER = registerBlock("polished_diorite_corner",() -> new BlockCorners(Block.Properties.from(Blocks.POLISHED_DIORITE_SLAB)), ExtendedSlabs.GROUP);
     public static final RegistryObject<Block> GRANITE_CORNER = registerBlock("granite_corner",() -> new BlockCorners(Block.Properties.from(Blocks.GRANITE_SLAB)), ExtendedSlabs.GROUP);
+    public static final RegistryObject<Block> POLISHED_GRANITE_CORNER = registerBlock("polished_granite_corner",() -> new BlockCorners(Block.Properties.from(Blocks.POLISHED_GRANITE_SLAB)), ExtendedSlabs.GROUP);
 
     // Nether
     public static final RegistryObject<Block> NETHERRACK_CORNER = registerBlock("netherrack_corner",() -> new BlockCorners(Block.Properties.from(Blocks.NETHERRACK)), ExtendedSlabs.GROUP);
+    public static final RegistryObject<Block> NETHER_BRICKS_CORNER = registerBlock("nether_bricks_corner",() -> new BlockCorners(Block.Properties.from(Blocks.NETHER_BRICK_SLAB)), ExtendedSlabs.GROUP);
+    public static final RegistryObject<Block> RED_NETHER_BRICKS_CORNER = registerBlock("red_nether_bricks_corner",() -> new BlockCorners(Block.Properties.from(Blocks.RED_NETHER_BRICK_SLAB)), ExtendedSlabs.GROUP);
+    public static final RegistryObject<Block> BLACKSTONE_CORNER = registerBlock("blackstone_corner",() -> new BlockCorners(Block.Properties.from(Blocks.BLACKSTONE_SLAB)), ExtendedSlabs.GROUP);
+    public static final RegistryObject<Block> POLISHED_BLACKSTONE_CORNER = registerBlock("polished_blackstone_corner",() -> new BlockCorners(Block.Properties.from(Blocks.POLISHED_BLACKSTONE_SLAB)), ExtendedSlabs.GROUP);
+    public static final RegistryObject<Block> POLISHED_BLACKSTONE_BRICKS_CORNER = registerBlock("polished_blackstone_bricks_corner",() -> new BlockCorners(Block.Properties.from(Blocks.POLISHED_BLACKSTONE_BRICK_SLAB)), ExtendedSlabs.GROUP);
 
     // End
     public static final RegistryObject<Block> END_STONE_CORNER = registerBlock("end_stone_corner",() -> new BlockCorners(Block.Properties.from(Blocks.END_STONE)), ExtendedSlabs.GROUP);
+    public static final RegistryObject<Block> END_STONE_BRICKS_CORNER = registerBlock("end_stone_bricks_corner",() -> new BlockCorners(Block.Properties.from(Blocks.END_STONE_BRICK_SLAB)), ExtendedSlabs.GROUP);
+    public static final RegistryObject<Block> PURPUR_CORNER = registerBlock("purpur_corner",() -> new BlockCorners(Block.Properties.from(Blocks.PURPUR_SLAB)), ExtendedSlabs.GROUP);
 
     // Woods
     public static final RegistryObject<Block> ACACIA_CORNER = registerBlock("acacia_corner",() -> new BlockCorners(Block.Properties.from(Blocks.OAK_SLAB)), ExtendedSlabs.GROUP);
