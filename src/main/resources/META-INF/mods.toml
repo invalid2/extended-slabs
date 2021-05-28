@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[35,)"
+loaderVersion="[36,)"
 issueTrackerURL="https://github.com/Blackout03/extended-slabs/issues"
 displayURL=""
 license="MIT License"
@@ -8,7 +8,7 @@ license="MIT License"
     modId="extendedslabs"
     version="${file.jarVersion}"
     displayName="Extended Slabs"
-    displayURL="https://www.curseforge.com/minecraft/mc-mods/extended-slabs-1-15"
+    displayURL="https://www.curseforge.com/minecraft/mc-mods/extended-slabs-plus"
     updateJSONURL="https://raw.githubusercontent.com/Blackout03/Version/master/extendedslabs_update.json"
     logoFile="icon.png"
     credits="Thinkverse"
@@ -18,13 +18,13 @@ license="MIT License"
 [[dependencies.extendedslabs]]
     modId="forge"
     mandatory=true
-    versionRange="[35,)"
+    versionRange="[36,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.extendedslabs]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.3]"
+    versionRange="[1.16.5]"
     ordering="NONE"
     side="BOTH"

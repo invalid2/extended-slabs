@@ -11,7 +11,7 @@ public enum VerticalSlabShape implements IStringSerializable {
 
     private final String name;
 
-    private VerticalSlabShape(String name) {
+    VerticalSlabShape(String name) {
         this.name = name;
     }
 

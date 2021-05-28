@@ -1,7 +1,7 @@
 package com.blackout.extendedslabs.core;
 
-import com.blackout.extendedslabs.api.block.ModSlabs;
-import com.blackout.extendedslabs.api.block.ModVerticalSlabs;
+import com.blackout.extendedslabs.init.ModSlabs;
+import com.blackout.extendedslabs.init.ModVerticalSlabs;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.color.BlockColors;

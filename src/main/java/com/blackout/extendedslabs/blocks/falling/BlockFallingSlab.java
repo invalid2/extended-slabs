@@ -31,7 +31,7 @@ public class BlockFallingSlab extends FallingBlock implements IWaterLoggable {
 
     public BlockFallingSlab(AbstractBlock.Properties properties) {
         super(properties);
-        this.setDefaultState(this.getDefaultState().with(TYPE, SlabType.BOTTOM).with(WATERLOGGED, Boolean.valueOf(false)));
+        this.setDefaultState(this.getDefaultState().with(TYPE, SlabType.BOTTOM).with(WATERLOGGED, Boolean.FALSE));
     }
 
     public boolean isTransparent(BlockState state) {
@@ -58,11 +58,11 @@ public class BlockFallingSlab extends FallingBlock implements IWaterLoggable {
     public BlockState getStateForPlacement(BlockItemUseContext context) {
         BlockPos blockpos = context.getPos();
         BlockState blockstate = context.getWorld().getBlockState(blockpos);
-        if (blockstate.isIn(this)) {
-            return blockstate.with(TYPE, SlabType.DOUBLE).with(WATERLOGGED, Boolean.valueOf(false));
+        if (blockstate.matchesBlock(this)) {
+            return blockstate.with(TYPE, SlabType.DOUBLE).with(WATERLOGGED, Boolean.FALSE);
         } else {
             FluidState fluidstate = context.getWorld().getFluidState(blockpos);
-            BlockState blockstate1 = this.getDefaultState().with(TYPE, SlabType.BOTTOM).with(WATERLOGGED, Boolean.valueOf(fluidstate.getFluid() == Fluids.WATER));
+            BlockState blockstate1 = this.getDefaultState().with(TYPE, SlabType.BOTTOM).with(WATERLOGGED, fluidstate.getFluid() == Fluids.WATER);
             Direction direction = context.getFace();
             return direction != Direction.DOWN && (direction == Direction.UP || !(context.getHitVec().y - (double)blockpos.getY() > 0.5D)) ? blockstate1 : blockstate1.with(TYPE, SlabType.TOP);
         }
@@ -93,11 +93,11 @@ public class BlockFallingSlab extends FallingBlock implements IWaterLoggable {
     }
 
     public boolean receiveFluid(IWorld worldIn, BlockPos pos, BlockState state, FluidState fluidStateIn) {
-        return state.get(TYPE) != SlabType.DOUBLE ? IWaterLoggable.super.receiveFluid(worldIn, pos, state, fluidStateIn) : false;
+        return state.get(TYPE) != SlabType.DOUBLE && IWaterLoggable.super.receiveFluid(worldIn, pos, state, fluidStateIn);
     }
 
     public boolean canContainFluid(IBlockReader worldIn, BlockPos pos, BlockState state, Fluid fluidIn) {
-        return state.get(TYPE) != SlabType.DOUBLE ? IWaterLoggable.super.canContainFluid(worldIn, pos, state, fluidIn) : false;
+        return state.get(TYPE) != SlabType.DOUBLE && IWaterLoggable.super.canContainFluid(worldIn, pos, state, fluidIn);
     }
 
     /**
@@ -115,15 +115,9 @@ public class BlockFallingSlab extends FallingBlock implements IWaterLoggable {
     }
 
     public boolean allowsMovement(BlockState state, IBlockReader worldIn, BlockPos pos, PathType type) {
-        switch(type) {
-            case LAND:
-                return false;
-            case WATER:
-                return worldIn.getFluidState(pos).isTagged(FluidTags.WATER);
-            case AIR:
-                return false;
-            default:
-                return false;
+        if (type == PathType.WATER) {
+            return worldIn.getFluidState(pos).isTagged(FluidTags.WATER);
         }
+        return false;
     }
 }

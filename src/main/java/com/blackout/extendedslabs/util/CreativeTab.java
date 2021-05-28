@@ -1,6 +1,6 @@
 package com.blackout.extendedslabs.util;
 
-import com.blackout.extendedslabs.api.block.ModVerticalSlabs;
+import com.blackout.extendedslabs.init.ModVerticalSlabs;
 import com.blackout.extendedslabs.core.ExtendedSlabs;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;

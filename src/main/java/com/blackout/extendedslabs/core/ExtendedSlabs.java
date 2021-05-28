@@ -1,9 +1,9 @@
 package com.blackout.extendedslabs.core;
 
-import com.blackout.extendedslabs.api.block.ModCorners;
-import com.blackout.extendedslabs.api.block.ModSlabs;
-import com.blackout.extendedslabs.api.block.ModStairs;
-import com.blackout.extendedslabs.api.block.ModVerticalSlabs;
+import com.blackout.extendedslabs.init.ModCorners;
+import com.blackout.extendedslabs.init.ModSlabs;
+import com.blackout.extendedslabs.init.ModStairs;
+import com.blackout.extendedslabs.init.ModVerticalSlabs;
 import com.blackout.extendedslabs.render.block.BlockRenderLayer;
 import com.blackout.extendedslabs.util.CreativeTab;
 import net.minecraft.item.ItemGroup;

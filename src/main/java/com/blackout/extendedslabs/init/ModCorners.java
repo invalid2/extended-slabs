@@ -1,4 +1,4 @@
-package com.blackout.extendedslabs.api.block;
+package com.blackout.extendedslabs.init;
 
 import com.blackout.extendedslabs.blocks.BlockCorners;
 import com.blackout.extendedslabs.core.ExtendedSlabs;
