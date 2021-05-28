@@ -40,7 +40,7 @@ public class BlockVerticalFallingSlab extends FallingBlock implements IWaterLogg
 
     public BlockVerticalFallingSlab(Block.Properties builder) {
         super(builder);
-        this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH).with(SHAPE, VerticalSlabShape.STRAIGHT).with(WATERLOGGED, Boolean.valueOf(false)));
+        this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH).with(SHAPE, VerticalSlabShape.STRAIGHT).with(WATERLOGGED, Boolean.FALSE));
     }
 
     @Override
@@ -75,65 +75,65 @@ public class BlockVerticalFallingSlab extends FallingBlock implements IWaterLogg
     private static VoxelShape getStraightFacingShapes(Direction facing) {
         switch (facing) {
             case WEST:
-                return (VoxelShape) WEST_SHAPE;
+                return WEST_SHAPE;
             case EAST:
-                return (VoxelShape) EAST_SHAPE;
+                return EAST_SHAPE;
             case SOUTH:
-                return (VoxelShape) SOUTH_SHAPE;
+                return SOUTH_SHAPE;
             default:
-                return (VoxelShape) NORTH_SHAPE;
+                return NORTH_SHAPE;
         }
     }
 
     private static VoxelShape getOuterLeftFacingShapes(Direction facing) {
         switch (facing) {
             case WEST:
-                return (VoxelShape) WEST_OUTER_SHAPE;
+                return WEST_OUTER_SHAPE;
             case EAST:
-                return (VoxelShape) EAST_OUTER_SHAPE;
+                return EAST_OUTER_SHAPE;
             case SOUTH:
-                return (VoxelShape) SOUTH_OUTER_SHAPE;
+                return SOUTH_OUTER_SHAPE;
             default:
-                return (VoxelShape) NORTH_OUTER_SHAPE;
+                return NORTH_OUTER_SHAPE;
         }
     }
 
     private static VoxelShape getInnerLeftFacingShapes(Direction facing) {
         switch (facing) {
             case WEST:
-                return (VoxelShape) VoxelShapes.or(WEST_SHAPE, SOUTH_SHAPE);
+                return VoxelShapes.or(WEST_SHAPE, SOUTH_SHAPE);
             case EAST:
-                return (VoxelShape) VoxelShapes.or(EAST_SHAPE, NORTH_SHAPE);
+                return VoxelShapes.or(EAST_SHAPE, NORTH_SHAPE);
             case SOUTH:
-                return (VoxelShape) VoxelShapes.or(SOUTH_SHAPE, EAST_SHAPE);
+                return VoxelShapes.or(SOUTH_SHAPE, EAST_SHAPE);
             default:
-                return (VoxelShape) VoxelShapes.or(NORTH_SHAPE, WEST_SHAPE);
+                return VoxelShapes.or(NORTH_SHAPE, WEST_SHAPE);
         }
     }
 
     private static VoxelShape getOuterRightFacingShapes(Direction facing) {
         switch (facing) {
             case WEST:
-                return (VoxelShape) NORTH_OUTER_SHAPE;
+                return NORTH_OUTER_SHAPE;
             case EAST:
-                return (VoxelShape) SOUTH_OUTER_SHAPE;
+                return SOUTH_OUTER_SHAPE;
             case SOUTH:
-                return (VoxelShape) WEST_OUTER_SHAPE;
+                return WEST_OUTER_SHAPE;
             default:
-                return (VoxelShape) EAST_OUTER_SHAPE;
+                return EAST_OUTER_SHAPE;
         }
     }
 
     private static VoxelShape getInnerRightFacingShapes(Direction facing) {
         switch (facing) {
             case WEST:
-                return (VoxelShape) VoxelShapes.or(WEST_SHAPE, NORTH_SHAPE);
+                return VoxelShapes.or(WEST_SHAPE, NORTH_SHAPE);
             case EAST:
-                return (VoxelShape) VoxelShapes.or(EAST_SHAPE, SOUTH_SHAPE);
+                return VoxelShapes.or(EAST_SHAPE, SOUTH_SHAPE);
             case SOUTH:
-                return (VoxelShape) VoxelShapes.or(SOUTH_SHAPE, WEST_SHAPE);
+                return VoxelShapes.or(SOUTH_SHAPE, WEST_SHAPE);
             default:
-                return (VoxelShape) VoxelShapes.or(NORTH_SHAPE, EAST_SHAPE);
+                return VoxelShapes.or(NORTH_SHAPE, EAST_SHAPE);
         }
     }
 
@@ -142,7 +142,7 @@ public class BlockVerticalFallingSlab extends FallingBlock implements IWaterLogg
     public BlockState getStateForPlacement(BlockItemUseContext context) {
         Direction enumfacing = context.getFace();
         FluidState ifluidstate = context.getWorld().getFluidState(context.getPos());
-        BlockState iblockstate = this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing()).with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
+        BlockState iblockstate = this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing()).with(WATERLOGGED, ifluidstate.getFluid() == Fluids.WATER);
         return iblockstate.with(SHAPE, getSlabShape(iblockstate, context.getWorld(), context.getPos()));
     }
 
@@ -185,7 +185,6 @@ public class BlockVerticalFallingSlab extends FallingBlock implements IWaterLogg
     }
 
     @Override
-    @SuppressWarnings("deprecation")
     public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos) {
         if (stateIn.get(WATERLOGGED)) {
             worldIn.getPendingFluidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickRate(worldIn));

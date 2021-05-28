@@ -1,24 +1,17 @@
 buildscript {
     repositories {
         maven { url = "https://files.minecraftforge.net/maven" }
-        maven { url = "https://dist.creeper.host/Sponge/maven" }
         jcenter()
         mavenCentral()
     }
     dependencies {
         classpath group: "net.minecraftforge.gradle", name: "ForgeGradle", version: "3.+", changing: true
-        classpath group: "org.spongepowered", name: "mixingradle", version: "0.7-SNAPSHOT"
     }
 }
 
 apply plugin: "net.minecraftforge.gradle"
 apply plugin: "eclipse"
 apply plugin: "maven-publish"
-apply plugin: "org.spongepowered.mixin"
-
-mixin {
-    add sourceSets.main, project.modId + ".refmap.json"
-}
 
 version = "${project.minecraft}-${project.modVersion}"
 group = 'com.blackout.extendedslabs'
@@ -33,8 +26,6 @@ minecraft {
             workingDirectory project.file("run")
             property "forge.logging.markers", "SCAN,REGISTRIES,REGISTRYDUMP"
             property "forge.logging.console.level", "debug"
-            property "mixin.env.disableRefMap", "true"
-            arg "-mixin.config=extendedslabs.mixins.json"
             mods {
                 extendedslabs {
                     source sourceSets.main
@@ -45,8 +36,6 @@ minecraft {
             workingDirectory project.file("run")
             property "forge.logging.markers", "SCAN,REGISTRIES,REGISTRYDUMP"
             property "forge.logging.console.level", "debug"
-            property "mixin.env.disableRefMap", "true"
-            arg "-mixin.config=extendedslabs.mixins.json"
             mods {
                 extendedslabs {
                     source sourceSets.main
@@ -71,8 +60,8 @@ dependencies {
     minecraft "net.minecraftforge:forge:${project.minecraft}-${project.forge}"
     implementation fg.deobf("curse.maven:biomes_o_plenty-220318:${project.biomesOPlenty}")
 
-    compileOnly fg.deobf("mezz.jei:jei-1.16.4:${project.jei}:api")
-    runtimeOnly fg.deobf("mezz.jei:jei-1.16.4:${project.jei}")
+    compileOnly fg.deobf("mezz.jei:jei-1.16.5:${project.jei}:api")
+    runtimeOnly fg.deobf("mezz.jei:jei-1.16.5:${project.jei}")
 
 }
 
@@ -101,7 +90,6 @@ jar {
                 "Implementation-Version"  : project.modVersion,
                 "Implementation-Vendor"   : "Blackout",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
-                "MixinConfigs"            : project.modId + ".mixins.json"
         ])
     }
 }

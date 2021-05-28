@@ -51,7 +51,7 @@ public class BlockCorners extends HorizontalBlock implements IWaterLoggable {
     public BlockState getStateForPlacement(BlockItemUseContext context) {
         Direction direction = context.getFace();
         FluidState iFluidState = context.getWorld().getFluidState(context.getPos());
-        return this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing()).with(WATERLOGGED, Boolean.valueOf(iFluidState.getFluid() == Fluids.WATER));
+        return this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing()).with(WATERLOGGED, iFluidState.getFluid() == Fluids.WATER);
     }
 
     @Override
@@ -61,13 +61,13 @@ public class BlockCorners extends HorizontalBlock implements IWaterLoggable {
         switch (direction) {
             case NORTH:
             default:
-                return (VoxelShape) VoxelShapes.or(NORTH_SHAPE, WEST_OUTER_SHAPE);
+                return VoxelShapes.or(NORTH_SHAPE, WEST_OUTER_SHAPE);
             case SOUTH:
-                return (VoxelShape) VoxelShapes.or(SOUTH_SHAPE, EAST_OUTER_SHAPE);
+                return VoxelShapes.or(SOUTH_SHAPE, EAST_OUTER_SHAPE);
             case WEST:
-                return (VoxelShape) VoxelShapes.or(WEST_SHAPE, SOUTH_OUTER_SHAPE);
+                return VoxelShapes.or(WEST_SHAPE, SOUTH_OUTER_SHAPE);
             case EAST:
-                return (VoxelShape) VoxelShapes.or(EAST_SHAPE, NORTH_OUTER_SHAPE);
+                return VoxelShapes.or(EAST_SHAPE, NORTH_OUTER_SHAPE);
         }
     }
 

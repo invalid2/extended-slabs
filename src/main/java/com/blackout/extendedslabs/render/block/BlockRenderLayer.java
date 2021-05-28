@@ -1,7 +1,7 @@
 package com.blackout.extendedslabs.render.block;
 
-import com.blackout.extendedslabs.api.block.ModSlabs;
-import com.blackout.extendedslabs.api.block.ModVerticalSlabs;
+import com.blackout.extendedslabs.init.ModSlabs;
+import com.blackout.extendedslabs.init.ModVerticalSlabs;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 

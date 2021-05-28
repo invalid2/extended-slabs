@@ -22,7 +22,6 @@ public class BlockPathSlab extends SlabBlock {
     }
 
     @Override
-    @SuppressWarnings("deprecation")
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
         SlabType slabtype = state.get(TYPE);
         switch(slabtype) {
