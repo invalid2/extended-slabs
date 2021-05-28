@@ -50,22 +50,22 @@ public class ModSlabs {
     public static final RegistryObject<Block> BLACK_WOOL_SLAB = registerBlock("black_wool_slab",() -> new SlabBlock(Block.Properties.from(Blocks.BLACK_WOOL)), ExtendedSlabs.GROUP);
 
     // CONCRETE POWDER
-    public static final RegistryObject<Block> WHITE_CONCRETE_POWDER_SLAB = registerBlock("white_concrete_powder_slab",() -> new SlabBlock(Block.Properties.from(Blocks.WHITE_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
-    public static final RegistryObject<Block> ORANGE_CONCRETE_POWDER_SLAB = registerBlock("orange_concrete_powder_slab",() -> new SlabBlock(Block.Properties.from(Blocks.ORANGE_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
-    public static final RegistryObject<Block> MAGENTA_CONCRETE_POWDER_SLAB = registerBlock("magenta_concrete_powder_slab",() -> new SlabBlock(Block.Properties.from(Blocks.MAGENTA_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
-    public static final RegistryObject<Block> LIGHT_BLUE_CONCRETE_POWDER_SLAB = registerBlock("light_blue_concrete_powder_slab",() -> new SlabBlock(Block.Properties.from(Blocks.LIGHT_BLUE_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
-    public static final RegistryObject<Block> YELLOW_CONCRETE_POWDER_SLAB = registerBlock("yellow_concrete_powder_slab",() -> new SlabBlock(Block.Properties.from(Blocks.YELLOW_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
-    public static final RegistryObject<Block> LIME_CONCRETE_POWDER_SLAB = registerBlock("lime_concrete_powder_slab",() -> new SlabBlock(Block.Properties.from(Blocks.LIME_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
-    public static final RegistryObject<Block> PINK_CONCRETE_POWDER_SLAB = registerBlock("pink_concrete_powder_slab",() -> new SlabBlock(Block.Properties.from(Blocks.PINK_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
-    public static final RegistryObject<Block> GRAY_CONCRETE_POWDER_SLAB = registerBlock("gray_concrete_powder_slab",() -> new SlabBlock(Block.Properties.from(Blocks.GRAY_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
-    public static final RegistryObject<Block> LIGHT_GRAY_CONCRETE_POWDER_SLAB = registerBlock("light_gray_concrete_powder_slab",() -> new SlabBlock(Block.Properties.from(Blocks.LIGHT_GRAY_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
-    public static final RegistryObject<Block> CYAN_CONCRETE_POWDER_SLAB = registerBlock("cyan_concrete_powder_slab",() -> new SlabBlock(Block.Properties.from(Blocks.CYAN_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
-    public static final RegistryObject<Block> PURPLE_CONCRETE_POWDER_SLAB = registerBlock("purple_concrete_powder_slab",() -> new SlabBlock(Block.Properties.from(Blocks.PURPLE_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
-    public static final RegistryObject<Block> BLUE_CONCRETE_POWDER_SLAB = registerBlock("blue_concrete_powder_slab",() -> new SlabBlock(Block.Properties.from(Blocks.BLUE_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
-    public static final RegistryObject<Block> BROWN_CONCRETE_POWDER_SLAB = registerBlock("brown_concrete_powder_slab",() -> new SlabBlock(Block.Properties.from(Blocks.BROWN_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
-    public static final RegistryObject<Block> GREEN_CONCRETE_POWDER_SLAB = registerBlock("green_concrete_powder_slab",() -> new SlabBlock(Block.Properties.from(Blocks.GREEN_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
-    public static final RegistryObject<Block> RED_CONCRETE_POWDER_SLAB = registerBlock("red_concrete_powder_slab",() -> new SlabBlock(Block.Properties.from(Blocks.RED_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
-    public static final RegistryObject<Block> BLACK_CONCRETE_POWDER_SLAB = registerBlock("black_concrete_powder_slab",() -> new SlabBlock(Block.Properties.from(Blocks.BLACK_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
+    public static final RegistryObject<Block> WHITE_CONCRETE_POWDER_SLAB = registerBlock("white_concrete_powder_slab",() -> new BlockFallingSlab(Block.Properties.from(Blocks.WHITE_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
+    public static final RegistryObject<Block> ORANGE_CONCRETE_POWDER_SLAB = registerBlock("orange_concrete_powder_slab",() -> new BlockFallingSlab(Block.Properties.from(Blocks.ORANGE_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
+    public static final RegistryObject<Block> MAGENTA_CONCRETE_POWDER_SLAB = registerBlock("magenta_concrete_powder_slab",() -> new BlockFallingSlab(Block.Properties.from(Blocks.MAGENTA_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
+    public static final RegistryObject<Block> LIGHT_BLUE_CONCRETE_POWDER_SLAB = registerBlock("light_blue_concrete_powder_slab",() -> new BlockFallingSlab(Block.Properties.from(Blocks.LIGHT_BLUE_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
+    public static final RegistryObject<Block> YELLOW_CONCRETE_POWDER_SLAB = registerBlock("yellow_concrete_powder_slab",() -> new BlockFallingSlab(Block.Properties.from(Blocks.YELLOW_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
+    public static final RegistryObject<Block> LIME_CONCRETE_POWDER_SLAB = registerBlock("lime_concrete_powder_slab",() -> new BlockFallingSlab(Block.Properties.from(Blocks.LIME_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
+    public static final RegistryObject<Block> PINK_CONCRETE_POWDER_SLAB = registerBlock("pink_concrete_powder_slab",() -> new BlockFallingSlab(Block.Properties.from(Blocks.PINK_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
+    public static final RegistryObject<Block> GRAY_CONCRETE_POWDER_SLAB = registerBlock("gray_concrete_powder_slab",() -> new BlockFallingSlab(Block.Properties.from(Blocks.GRAY_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
+    public static final RegistryObject<Block> LIGHT_GRAY_CONCRETE_POWDER_SLAB = registerBlock("light_gray_concrete_powder_slab",() -> new BlockFallingSlab(Block.Properties.from(Blocks.LIGHT_GRAY_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
+    public static final RegistryObject<Block> CYAN_CONCRETE_POWDER_SLAB = registerBlock("cyan_concrete_powder_slab",() -> new BlockFallingSlab(Block.Properties.from(Blocks.CYAN_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
+    public static final RegistryObject<Block> PURPLE_CONCRETE_POWDER_SLAB = registerBlock("purple_concrete_powder_slab",() -> new BlockFallingSlab(Block.Properties.from(Blocks.PURPLE_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
+    public static final RegistryObject<Block> BLUE_CONCRETE_POWDER_SLAB = registerBlock("blue_concrete_powder_slab",() -> new BlockFallingSlab(Block.Properties.from(Blocks.BLUE_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
+    public static final RegistryObject<Block> BROWN_CONCRETE_POWDER_SLAB = registerBlock("brown_concrete_powder_slab",() -> new BlockFallingSlab(Block.Properties.from(Blocks.BROWN_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
+    public static final RegistryObject<Block> GREEN_CONCRETE_POWDER_SLAB = registerBlock("green_concrete_powder_slab",() -> new BlockFallingSlab(Block.Properties.from(Blocks.GREEN_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
+    public static final RegistryObject<Block> RED_CONCRETE_POWDER_SLAB = registerBlock("red_concrete_powder_slab",() -> new BlockFallingSlab(Block.Properties.from(Blocks.RED_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
+    public static final RegistryObject<Block> BLACK_CONCRETE_POWDER_SLAB = registerBlock("black_concrete_powder_slab",() -> new BlockFallingSlab(Block.Properties.from(Blocks.BLACK_CONCRETE_POWDER)), ExtendedSlabs.GROUP);
 
     // CONCRETE
     public static final RegistryObject<Block> WHITE_CONCRETE_SLAB = registerBlock("white_concrete_slab",() -> new SlabBlock(Block.Properties.from(Blocks.WHITE_CONCRETE)), ExtendedSlabs.GROUP);
